@@ -236,6 +236,9 @@ export interface WritingOptions extends CommonOptions {
 
     /** Override workbook properties on save */
     Props?: Properties;
+
+    /** Hide worksheet gridlines */
+    hideGridLines?: boolean;
 }
 
 /** Workbook Object */

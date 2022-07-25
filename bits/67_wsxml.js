@@ -237,6 +237,7 @@ function parse_ws_xml_sheetviews(data, wb/*:WBWBProps*/) {
 function write_ws_xml_sheetviews(ws, opts, idx, wb)/*:string*/ {
 	var sview = ({workbookViewId:"0"}/*:any*/);
 	// $FlowIgnore
+	sview.showGridLines = opts?.hideGridLines ? "0" : "1";
 	if((((wb||{}).Workbook||{}).Views||[])[0]) sview.rightToLeft = wb.Workbook.Views[0].RTL ? "1" : "0";
 	return writextag("sheetViews", writextag("sheetView", null, sview), {});
 }

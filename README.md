@@ -1,26 +1,18 @@
-<h1 align='center'>Sheetjs-style</h1>
-<p align='center'>
-  <a href="https://travis-ci.com/Yoshino-UI/Yoshino/">
-    <img src="https://travis-ci.com/Yoshino-UI/Yoshino.svg" alt="travis ci badge">
-  </a>
-  <img src='https://img.shields.io/npm/v/sheetjs-style.svg?style=flat-square' alt="version">
-  <img src='https://img.shields.io/npm/l/sheetjs-style.svg' alt="license">
-  <img src='https://img.shields.io/npm/dt/sheetjs-style.svg?style=flat-square' alt="downloads">
-  <img src='https://img.shields.io/npm/dm/sheetjs-style.svg?style=flat-square' alt="downloads-month">
-</p>
-<p align='center'>support set cell style for sheetjs!</p>
+# SheetJS-Style
+
+<p align='center'>Support set cell style for sheetjs!</p>
 <p align='center'>API is the same as sheetjs!</p>
 
-## install
+## Install
 ```
-npm install sheetjs-style
+npm install @tiendat/xlsx-style
 ```
 
 ## How to Use?
 Please read [SheetJs Documents](https://github.com/SheetJS/sheetjs/blob/3468395494c450ea8ba7e20afb1bd6127f516ccd/README.md)!
 
 ## How to set cell Style?
-for example:
+For example:
 ```js
 const XLSX = require('sheetjs-style');
 const wb = XLSX.utils.book_new();
@@ -119,7 +111,26 @@ Borders for merged areas are specified for each cell within the merged area.  So
 * right borders for the cells on the right
 * top borders for the cells on the top
 * bottom borders for the cells on the left
- 
+
+## About the fork
+
+- Add option to hide sheet gridlines
+
+```js
+const XLSX = require('sheetjs-style');
+const wb = XLSX.utils.book_new();
+
+...
+
+XLSX.write(wb, {
+  bookType: 'xlsx',
+  type: 'array',
+  hideGridLines: true
+});
+
+```
+
 ## Thanks
 [sheetjs](https://github.com/SheetJS/sheetjs)
 [js-xlsx](https://github.com/protobi/js-xlsx)
+[sheetjs-style](https://github.com/ShanaMaid/sheetjs-style)
